@@ -8,14 +8,19 @@ html {
 }
 .container {
     display: flex;
-    flex-direction: column;
     background-color: hsl(0, 0%, 100%);
-    max-width: 375px;
+    width: 375px;
     border-radius: 8px;
+    padding:auto;
+    margin:auto;
 }
-img {
-    border-radius: 8px 8px 0px 0px;
-    max-width: 375px;
+.image {
+    display: flex;
+    width: 375px;
+}
+.texts {
+    display: flex;
+    flex-direction: column;
 }
 .description {
     width: 335px;
@@ -59,19 +64,6 @@ span + span {
     color: hsl(228, 12%, 48%);
     font-size: 1.2rem;
 }
-button {
-    background-color: hsl(158, 36%, 37%);
-    background:url('images/icon-cart.svg') no-repeat left center;
-    padding-left:20px;
-    font-family: 'Montserrat';
-    font-size: 1.4rem;
-    font-weight: bold;
-    border-radius: 8px;
-    border: none;
-    width: 75vw;
-    height: 50px;
-    align-self: center;
-}
 /* Glassy Buttons */
 .btn {
     display: flex; 
@@ -83,16 +75,16 @@ button {
     height: 50px;
     line-height: 50px;
     align-self: center;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 .icon-cart {
+    display: flex;
     width: 2rem;
     height: 2rem;
-    margin: 15px 0px 0px 100px;
-    align-content: center;
-    
 }
 .text-cart {
+    display: flex;
     color: hsl(0, 0%, 100%);
     font-family: 'Montserrat',sans-serif;
     font-size: 1.6rem;
@@ -104,4 +96,44 @@ button {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+@media (min-width: 375px ) and (max-width: 779px) {
+    .container {
+        flex-direction: column;
+    }
+    .image {
+        content: url("./images/image-product-mobile.jpg");
+        border-radius: 8px 8px 0px 0px;
+    }
+}
+@media (min-width: 780px) {
+    .container {
+        flex-direction: row;
+        width: 700px;
+    }
+    .image {
+        content: url("./images/image-product-desktop.jpg");
+        border-radius: 8px 0px 0px 8px;
+    }
+    .texts {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .description {
+        width: 260px;
+        margin-left: 10px;
+    }
+    .btn {
+        width: 250px;
+    }
+    h1 {
+        margin-bottom: 30px;
+    }
+    h2 {
+        margin-bottom: 30px;
+    }
+    .price {
+        margin-left: 10px;
+    }
 }
