@@ -4,18 +4,31 @@ html {
     padding: 0;
     margin: 0;
     font-size: 62.5%;
+    background-color: hsl(30, 38%, 92%);
 }
-div {
+.container {
     display: flex;
     flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 375px;
+}
+img {
+    border-radius: 8px 8px 0px 0px;
+    max-width: 375px;
+}
+.description {
+    width: 335px;
+    padding: 20px;
 }
 h1 {
     font-family: 'Fraunces',sans-serif;
     font-size: 3.4rem;
+    margin-top: 10px;
 }
 h2 {
     font-family: 'Montserrat',serif;
     font-size: 1.4rem;
+    margin: 0;
     font-weight: lighter;
     color: hsl(228, 12%, 48%);
 }
@@ -24,20 +37,38 @@ p{
     color: hsl(228, 12%, 48%);
     font-size: 1.6rem;
 }
-p span {
+.price {
+    margin: 0px 0px 20px 0px;
+}
+span {
     font-family: 'Fraunces',sans-serif;
     color: hsl(158, 36%, 37%);
     font-size: 3rem;
+    margin-left: 20px;
+    vertical-align: middle;
 }
-p > span + span {
+span + span {
     font-family: 'Montserrat';
     font-weight: lighter;
+    text-decoration: line-through;
     color: hsl(228, 12%, 48%);
     font-size: 1.4rem;
-    text-decoration: line-through;
+}
+button {
+    background-color: hsl(158, 36%, 37%);
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    border: none;
+    width: 70vw;
+    height: 50px;
+    align-self: center;
 }
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center; 
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
