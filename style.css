@@ -24,6 +24,7 @@ img {
 h1 {
     font-family: 'Fraunces',sans-serif;
     font-size: 3.4rem;
+    line-height: 3.2rem;
     margin: 10px 0px 0px 0px;
 }
 h2 {
@@ -39,6 +40,7 @@ p{
     color: hsl(228, 12%, 48%);
     font-size: 1.6rem;
     margin-right: 0;
+    line-height: 2.6rem;
 }
 .price {
     margin: 0px 0px 15px 0px;
@@ -72,14 +74,23 @@ button {
 }
 /* Glassy Buttons */
 .btn {
+    display: flex; 
     background-color: hsl(158, 36%, 37%);
     margin-bottom: 25px;
     border-radius: 8px;
     border-color: transparent;
+    width: 340px;
     height: 50px;
-    max-width: 300px;
+    line-height: 50px;
     align-self: center;
-    align-items: center;
+    align-content: center;
+}
+.icon-cart {
+    width: 2rem;
+    height: 2rem;
+    margin: 15px 0px 0px 100px;
+    align-content: center;
+    
 }
 .text-cart {
     color: hsl(0, 0%, 100%);
