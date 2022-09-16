@@ -11,6 +11,7 @@ html {
     flex-direction: column;
     background-color: hsl(0, 0%, 100%);
     max-width: 375px;
+    border-radius: 8px;
 }
 img {
     border-radius: 8px 8px 0px 0px;
@@ -18,17 +19,18 @@ img {
 }
 .description {
     width: 335px;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
 }
 h1 {
     font-family: 'Fraunces',sans-serif;
     font-size: 3.4rem;
-    margin-top: 10px;
+    margin: 10px 0px 0px 0px;
 }
 h2 {
-    font-family: 'Montserrat',serif;
-    font-size: 1.4rem;
     margin: 0;
+    font-family: 'Montserrat',serif;
+    font-size: 1.2rem;
+    letter-spacing: .6rem;
     font-weight: lighter;
     color: hsl(228, 12%, 48%);
 }
@@ -36,9 +38,10 @@ p{
     font-family: 'Montserrat',sans-serif;
     color: hsl(228, 12%, 48%);
     font-size: 1.6rem;
+    margin-right: 0;
 }
 .price {
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 15px 0px;
 }
 span {
     font-family: 'Fraunces',sans-serif;
@@ -52,19 +55,37 @@ span + span {
     font-weight: lighter;
     text-decoration: line-through;
     color: hsl(228, 12%, 48%);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 button {
     background-color: hsl(158, 36%, 37%);
+    background:url('images/icon-cart.svg') no-repeat left center;
+    padding-left:20px;
     font-family: 'Montserrat';
     font-size: 1.4rem;
     font-weight: bold;
-    color: hsl(0, 0%, 100%);
     border-radius: 8px;
     border: none;
-    width: 70vw;
+    width: 75vw;
     height: 50px;
     align-self: center;
+}
+/* Glassy Buttons */
+.btn {
+    background-color: hsl(158, 36%, 37%);
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border-color: transparent;
+    height: 50px;
+    max-width: 300px;
+    align-self: center;
+    align-items: center;
+}
+.text-cart {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 .attribution { 
     font-size: 11px; 
