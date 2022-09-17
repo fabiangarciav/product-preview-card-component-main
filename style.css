@@ -8,7 +8,7 @@ html {
 }
 .container {
     display: flex;
-    background-color: hsl(0, 0%, 100%);
+    flex-direction: column;    background-color: hsl(0, 0%, 100%);
     width: 375px;
     border-radius: 8px;
     padding:auto;
@@ -16,21 +16,22 @@ html {
 }
 .image {
     display: flex;
-    width: 375px;
-}
-.texts {
-    display: flex;
-    flex-direction: column;
 }
 .description {
-    width: 335px;
-    padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.description-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 h1 {
     font-family: 'Fraunces',sans-serif;
     font-size: 3.4rem;
     line-height: 3.2rem;
-    margin: 10px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
 }
 h2 {
     margin: 0;
@@ -40,24 +41,24 @@ h2 {
     font-weight: lighter;
     color: hsl(228, 12%, 48%);
 }
-p{
+p {
+    /*margin: 20px 0px 20px 0px;*/
     font-family: 'Montserrat',sans-serif;
     color: hsl(228, 12%, 48%);
     font-size: 1.6rem;
-    margin-right: 0;
     line-height: 2.6rem;
 }
 .price {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 20px 0px;
 }
 span {
     font-family: 'Fraunces',sans-serif;
     color: hsl(158, 36%, 37%);
     font-size: 3rem;
-    margin-left: 20px;
     vertical-align: middle;
 }
 span + span {
+    margin: 0px 0px 0px 20px;
     font-family: 'Montserrat';
     font-weight: lighter;
     text-decoration: line-through;
@@ -65,30 +66,30 @@ span + span {
     font-size: 1.2rem;
 }
 /* Glassy Buttons */
-.btn {
-    display: flex; 
+button {
+    display: flex;
     background-color: hsl(158, 36%, 37%);
-    margin-bottom: 25px;
     border-radius: 8px;
     border-color: transparent;
-    width: 340px;
+    width: 100%;
     height: 50px;
-    line-height: 50px;
-    align-self: center;
     align-items: center;
     justify-content: center;
 }
-.icon-cart {
+button embed {
     display: flex;
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
-.text-cart {
-    display: flex;
+button span {
     color: hsl(0, 0%, 100%);
     font-family: 'Montserrat',sans-serif;
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0px 0px 0px 10px;
+    padding: 0;
+}
+button:hover {
+    background-color: hsl(158, 36%, 16%);
 }
 .attribution { 
     font-size: 11px; 
@@ -100,6 +101,7 @@ span + span {
 @media (min-width: 375px ) and (max-width: 779px) {
     .container {
         flex-direction: column;
+        max-width: fit-content;
     }
     .image {
         content: url("./images/image-product-mobile.jpg");
@@ -109,31 +111,20 @@ span + span {
 @media (min-width: 780px) {
     .container {
         flex-direction: row;
-        width: 700px;
+        width: 580px;
+        height: 450px;
     }
     .image {
         content: url("./images/image-product-desktop.jpg");
+        width: 280px;
         border-radius: 8px 0px 0px 8px;
     }
-    .texts {
-        height: 100vh;
-        flex-direction: column;
-        justify-content: space-around;
-    }
     .description {
+        justify-content: space-around;
         width: 260px;
-        margin-left: 10px;
-    }
-    .btn {
-        width: 250px;
+        height: 410px;
     }
     h1 {
-        margin-bottom: 30px;
-    }
-    h2 {
-        margin-bottom: 30px;
-    }
-    .price {
-        margin-left: 10px;
+        margin-right: 10px;
     }
 }
