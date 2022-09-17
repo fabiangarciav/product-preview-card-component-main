@@ -16,7 +16,7 @@ main {
     Align-items: center;
 }
 .container {
-    background-color: hsl(0, 0%, 100%);
+    display: flex;
     width: 375px;
     border-radius: 8px;
 }
@@ -25,6 +25,7 @@ img {
 }
 .description-box {
     padding: 20px;
+    background-color: hsl(0, 0%, 100%);
 }
 h1 {
     font-family: 'Fraunces',sans-serif;
@@ -68,7 +69,7 @@ span + span {
 button {
     display: flex;
     background-color: hsl(158, 36%, 37%);
-    margin: 20px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     border-radius: 8px;
     border-color: transparent;
     width: 100%;
@@ -77,7 +78,6 @@ button {
     justify-content: center;
 }
 button embed {
-    display: flex;
     width: 1.8rem;
     height: 1.8rem;
 }
@@ -85,7 +85,7 @@ button span {
     color: hsl(0, 0%, 100%);
     font-family: 'Montserrat',sans-serif;
     font-size: 1.4rem;
-    margin: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 15px;
     padding: 0;
 }
 button:hover {
@@ -102,16 +102,18 @@ button:hover {
 @media (min-width: 375px ) and (max-width: 1439px) {
     .container {
         max-width: fit-content;
+        flex-direction: column;
     }
     img {
         content: url("./images/image-product-mobile.jpg");
         border-radius: 8px 8px 0px 0px;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
     .container {
         width: 580px;
         height: 450px;
+        flex-direction: row;
     }
     img {
         content: url("./images/image-product-desktop.jpg");
@@ -119,7 +121,6 @@ button:hover {
         border-radius: 8px 0px 0px 8px;
     }
     .description-box {
-        justify-content: space-around;
         width: 260px;
         height: 410px;
     }
