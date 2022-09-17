@@ -8,26 +8,23 @@ html {
     background-color: hsl(30, 38%, 92%);
 }
 /*Principal div tag properties to containg all the design elements*/
-.container {
+main {
     display: flex;
-    flex-direction: column;    background-color: hsl(0, 0%, 100%);
+    flex-direction: column;
+    Min-height: 100vh;
+    Justify-content: center;
+    Align-items: center;
+}
+.container {
+    background-color: hsl(0, 0%, 100%);
     width: 375px;
     border-radius: 8px;
-    padding:auto;
-    margin:auto;
 }
-.image {
-    display: flex;
+img {
+    width: 375px;
 }
-.description {
-    display: flex;
-    flex-direction: column;
+.description-box {
     padding: 20px;
-}
-.description-text {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
 }
 h1 {
     font-family: 'Fraunces',sans-serif;
@@ -36,7 +33,7 @@ h1 {
     margin: 15px 0px 0px 0px;
 }
 h2 {
-    margin: 0;
+    margin: 15px 0px 0px 0px;
     font-family: 'Montserrat',serif;
     font-size: 1.2rem;
     letter-spacing: .6rem;
@@ -48,6 +45,7 @@ p {
     color: hsl(228, 12%, 48%);
     font-size: 1.6rem;
     line-height: 2.6rem;
+    margin: 20px 0px 20px 0px;
 }
 .price {
     margin: 0px 0px 20px 0px;
@@ -70,6 +68,7 @@ span + span {
 button {
     display: flex;
     background-color: hsl(158, 36%, 37%);
+    margin: 20px 0px 0px 0px;
     border-radius: 8px;
     border-color: transparent;
     width: 100%;
@@ -102,26 +101,24 @@ button:hover {
 /*Rules for adaptative preview card format and design*/
 @media (min-width: 375px ) and (max-width: 1439px) {
     .container {
-        flex-direction: column;
         max-width: fit-content;
     }
-    .image {
+    img {
         content: url("./images/image-product-mobile.jpg");
         border-radius: 8px 8px 0px 0px;
     }
 }
 @media (min-width: 1440px) {
     .container {
-        flex-direction: row;
         width: 580px;
         height: 450px;
     }
-    .image {
+    img {
         content: url("./images/image-product-desktop.jpg");
         width: 280px;
         border-radius: 8px 0px 0px 8px;
     }
-    .description {
+    .description-box {
         justify-content: space-around;
         width: 260px;
         height: 410px;
