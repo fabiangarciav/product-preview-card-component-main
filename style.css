@@ -31,10 +31,10 @@ h1 {
     font-family: 'Fraunces',sans-serif;
     font-size: 3.4rem;
     line-height: 3.2rem;
-    margin: 15px 0px 0px 0px;
+    margin-top: 15px;
 }
 h2 {
-    margin: 15px 0px 0px 0px;
+    margin-top: 15px;
     font-family: 'Montserrat',serif;
     font-size: 1.2rem;
     letter-spacing: .6rem;
@@ -49,7 +49,7 @@ p {
     margin: 20px 0px 20px 0px;
 }
 .price {
-    margin: 0px 0px 20px 0px;
+    margin-left: 20px;
 }
 span {
     font-family: 'Fraunces',sans-serif;
@@ -58,7 +58,7 @@ span {
     vertical-align: middle;
 }
 span + span {
-    margin: 0px 0px 0px 20px;
+    margin-left: 20px;
     font-family: 'Montserrat';
     font-weight: lighter;
     text-decoration: line-through;
@@ -69,7 +69,7 @@ span + span {
 button {
     display: flex;
     background-color: hsl(158, 36%, 37%);
-    margin: 30px 0px 0px 0px;
+    margin-top: 30px;
     border-radius: 8px;
     border-color: transparent;
     width: 100%;
@@ -85,7 +85,7 @@ button span {
     color: hsl(0, 0%, 100%);
     font-family: 'Montserrat',sans-serif;
     font-size: 1.4rem;
-    margin: 0px 0px 0px 15px;
+    margin-left: 15px;
     padding: 0;
 }
 button:hover {
@@ -108,8 +108,11 @@ button:hover {
         content: url("./images/image-product-mobile.jpg");
         border-radius: 8px 8px 0px 0px;
     }
+    .description-box {
+        border-radius: 0px 0px 8px 8px;
+    }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1440px) {
     .container {
         width: 580px;
         height: 450px;
@@ -123,6 +126,7 @@ button:hover {
     .description-box {
         width: 260px;
         height: 410px;
+        border-radius: 0px 8px 8px 0px;
     }
     h1 {
         margin-right: 10px;
